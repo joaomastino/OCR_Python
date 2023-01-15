@@ -30,7 +30,7 @@ class OCR:
             st.write("{}".format(self.texto))
             
             # Opzione analisi del testo
-            self.analisar_texto = st.sidebar.checkbox("Analisar texto")
+            self.analisar_texto = st.sidebar.checkbox("Analizza il testo")
             if self.analisar_texto==True:
                 self.mostrar_analise()
     
@@ -61,18 +61,18 @@ class OCR:
             st.success("Date estratte:")
             st.write(datas)
         
-        if p_boas==0:
-        # TO-DO: togliere?
-            st.warning("Não identificado palavras de bem.")
-        else:
-            st.success("Palavras de bem:")
-            st.write("{} palavra(s). Representam das palavras do texto: {:.2f}%".format(p_boas, percentual_bom))
+        # if p_boas==0:
+        # # TO-DO: togliere?
+        #     st.warning("Não identificado palavras de bem.")
+        # else:
+        #     st.success("Palavras de bem:")
+        #     st.write("{} palavra(s). Representam das palavras do texto: {:.2f}%".format(p_boas, percentual_bom))
         
-        if p_mas==0:
-            st.warning("Não identificado palavras más.")
-        else:
-            st.success("Palavras más:")
-            st.write("{} palavra(s). Representam das palavras do texto: {:.2f}%".format(p_mas, percentual_mau))
+        # if p_mas==0:
+        #     st.warning("Não identificado palavras más.")
+        # else:
+        #     st.success("Palavras más:")
+        #     st.write("{} palavra(s). Representam das palavras do texto: {:.2f}%".format(p_mas, percentual_mau))
 
 ocr = OCR()
 ocr.inicial()
