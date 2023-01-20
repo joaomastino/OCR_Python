@@ -25,7 +25,7 @@ class OCR:
         if imagem:
             img = Image.open(imagem)
             st.image(img, width=350)
-            st.info("Texto extraído")
+            st.info("Testo estratto")
             self.texto = self.extrair_texto(img)
             st.write("{}".format(self.texto))
             
